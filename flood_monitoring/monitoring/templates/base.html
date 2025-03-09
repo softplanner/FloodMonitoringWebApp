@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Flood Monitoring Tool{% endblock %}</title>
+    <!-- Add any CSS files here -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!-- Add Chart.js CDN in the head section of base.html -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Flood Monitoring Tool</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/stations/">Stations</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Content specific to each page will go here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Flood Monitoring Inc.</p>
+    </footer>
+
+    <!-- Include any JavaScript files here -->
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

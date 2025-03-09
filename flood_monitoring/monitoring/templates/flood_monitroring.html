@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}Flood Monitoring{% endblock %}
+
+{% block content %}
+<h2>Flood Monitoring Station</h2>
+
+<!-- Dropdown for selecting a station -->
+<select id="stationSelect" onchange="loadReadings()">
+    <option value="">Select Station</option>
+    {% for station in stations %}
+        <option value="{{ station.stationReference }}">{{ station.stationName }}</option>
+    {% endfor %}
+</select>
+
+<!-- Chart Canvas -->
+<canvas id="floodChart" width="400" height="200"></canvas>
+
+<!-- Error Message (If any) -->
+<div id="errorMessage" style="color: red; display: none;">
+    <p>Sorry, an error occurred while fetching data.</p>
+</div>
+
+<!-- Script to Handle Station Data and Chart Rendering -->
+<script>
+    // Function to fetch readings for a selected station
+    async function loadReadings() {
+        const stationId = document.getElementById('stationSelect').value;
+        if (!stationId) return; // If no station is selected, do nothing
+        
+        try {
+            const response = await fetch(`/readings/${stationId}/`); // Fetch readings based on station ID
+            const data = await response.json(); // Parse response JSON
+            
+            if (data.error) {  // If error occurs
+                document.getElementById('errorMessage').style.display = 'block';
+                return;
+            }
+
+            // Prepare data for chart
+            const timestamps = data.map(item => item.timestamp);
+            const values = data.map(item => item.value);
+            
+            // Update chart with new data
+            updateChart(timestamps, values);
+        } catch (error) {
+            document.getElementById('errorMessage').style.display = 'block';  // Show error if fetching fails
+            console.error("Error fetching readings:", error);
+        }
+    }
+
+    // Function to update the chart
+    function updateChart(timestamps, values) {
+        const ctx = document.getElementById('floodChart').getContext('2d');
+        
+        // Create chart if it doesn't exist or update if it does
+        if (window.myChart) {
+            window.myChart.data.labels = timestamps;
+            window.myChart.data.datasets[0].data = values;
+            window.myChart.update();
+        } else {
+            window.myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: timestamps,
+                    datasets: [{
+                        label: 'Flood Levels',
+                        data: values,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1,
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: false
+                        }
+                    }
+                }
+            });
+        }
+    }
+</script>
+{% endblock %}

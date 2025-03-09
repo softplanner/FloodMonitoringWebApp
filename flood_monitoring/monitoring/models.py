@@ -32,7 +32,7 @@ class Stations(models.Model):
         
     # static method to fetch readings for a specific station based on its station ID
     @staticmethod
-    def get_readings(station_id):
+    def get_station_readings(station_id):
         try:
             url = f"https://environment.data.gov.uk/flood-monitoring/api/readings?stationReference={station_id}"  # API URL to fetch readings
             # Fetch data from the API

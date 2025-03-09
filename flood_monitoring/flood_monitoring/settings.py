@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +27,21 @@ SECRET_KEY = 'django-insecure-@_%(#55j0$scfskch)b=-^+sgkjnb%bpqt%$@uqe1u8d+dnd*(
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+
+# ==========================================================
+# My Settings
+# The URL to access static files from the browser
+STATIC_URL = '/static/'
+
+# The directory where static files will be collected (for production)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Additional directories where static files can be found (for development)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'monitoring/static'),  # The 'static' directory inside your app
+]
+# ==========================================================
 
 
 # Application definition
