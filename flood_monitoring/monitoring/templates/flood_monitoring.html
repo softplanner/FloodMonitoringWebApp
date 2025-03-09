@@ -3,15 +3,22 @@
 {% block title %}Flood Monitoring{% endblock %}
 
 {% block content %}
-<h2>Flood Monitoring Station</h2>
+<h2>Flood Monitoring</h2>
 
 <!-- Dropdown for selecting a station -->
-<select id="stationSelect" onchange="loadReadings()">
+<!-- <select id="stationSelect" onchange="loadReadings()">
     <option value="">Select Station</option>
     {% for station in stations %}
         <option value="{{ station.stationReference }}">{{ station.stationName }}</option>
     {% endfor %}
+</select> -->
+
+
+<select id="stationSelect"> 
+    <option value="">Loading...</option>
 </select>
+
+
 
 <!-- Chart Canvas -->
 <canvas id="floodChart" width="400" height="200"></canvas>
@@ -23,6 +30,70 @@
 
 <!-- Script to Handle Station Data and Chart Rendering -->
 <script>
+
+    window.onload = function() {
+        getStation();  // Call the function on page load
+    };
+
+
+
+
+
+    // The function to make the API call
+    async function getStation() {
+            fetch('/monitoring/stations/')
+                .then(response => response.json())
+                .then(data => {
+
+                    console.log("API Response:", data); 
+
+                    let dropdown = document.getElementById("stationSelect");
+                    dropdown.innerHTML = ''; // Clear existing options
+                    
+                    data.data.items.forEach(item => {
+
+                        console.log(item.stationReference)
+                        console.log(item.town)    
+
+                        let option = document.createElement("option");
+                        option.value = item.stationReference;
+                        option.textContent = item.town;
+                        dropdown.appendChild(option);
+                    });
+                })
+                .catch(error => console.error("Error loading data:", error));
+        
+
+
+
+            
+            // console.log('in get station browser')
+            // const response = await fetch('/monitoring/stations/'); // Adjust this to your API endpoint
+            // const data = await response.json();
+            // // console.log(data); // Check the response in console
+
+            // $(data.items).each(function(i, item) {
+            //     // alert(item);
+            //     console.log(item);
+            // });
+
+            // let dropdown = document.getElementById("stationSelect");
+            //         dropdown.innerHTML = ''; // Clear existing options
+                    
+            //         data.items.forEach(item => {
+
+            //             console.log(item.stationReference)
+            //             console.log(item.town)    
+
+            //             let option = document.createElement("option");
+            //             option.value = item.stationReference;
+            //             option.textContent = item.town;
+            //             dropdown.appendChild(option);
+            //         });
+    }
+
+
+
     // Function to fetch readings for a selected station
     async function loadReadings() {
         const stationId = document.getElementById('stationSelect').value;
