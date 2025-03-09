@@ -14,8 +14,8 @@ class Stations(models.Model):
     @staticmethod
     def get_stations():
         try:
-            # url = "https://environment.data.gov.uk/flood-monitoring/api/stations" # API URL to get all stations
-            url = "https://environment.data.gov.uk/flood-monitoring/id/stations?_limit=50"
+            # url = "https://environment.data.gov.uk/flood-monitoring/id/stations?_limit=50"
+            url = "https://environment.data.gov.uk/flood-monitoring/id/stations"
             # Fetch data from the API
             response = requests.get(url)
             # print(response.json())
@@ -37,7 +37,11 @@ class Stations(models.Model):
     @staticmethod
     def get_station_readings(station_id):
         try:
-            url = f"https://environment.data.gov.uk/flood-monitoring/id/readings?stationReference={station_id}"  # API URL to fetch readings
+            # url = f"https://environment.data.gov.uk/flood-monitoring/id/stations/{station_id}/measures"
+            # url = f"https://environment.data.gov.uk/flood-monitoring/id/stations/{station_id}/readings?_sorted&_limit=100"
+            url = f"https://environment.data.gov.uk/flood-monitoring/id/stations/{station_id}/readings?_sorted"
+            print("URL inside models")
+            print(url)
             # Fetch data from the API
             response = requests.get(url)
             # Raise an exception if the status code indicates failure (e.g., 404, 500)
