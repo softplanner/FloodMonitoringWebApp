@@ -43,6 +43,39 @@ D:\FloodMonitoringWebApp\flood_monitoring> pip install django
 D:\FloodMonitoringWebApp\flood_monitoring> pip install requests
 D:\FloodMonitoringWebApp\flood_monitoring> python manage.py runserver
 ```
+
+Running the Project in VS Code
+Open the project in VS Code:
+
+```bash
+code .
+```
+
+Select the Python interpreter:
+
+```bash
+Press Ctrl+Shift+P (or Cmd+Shift+P on macOS) and type Python: Select Interpreter.
+```bash
+
+Choose the virtual environment you created (e.g., venv).
+
+Run the server:
+
+```bash
+Open the integrated terminal in VS Code (`Ctrl+``).
+```bash
+
+Activate the virtual environment (if not already activated):
+
+```bash
+source venv/bin/activate  # macOS/Linux
+venv\Scripts\activate     # Windows
+Start the Django development server:
+```
+
+```bash
+python manage.py runserver
+```
 ## Usage
 - Open the web application in your browser.
 - View real-time flood data on the map.
