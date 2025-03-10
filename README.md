@@ -48,7 +48,6 @@ Open the integrated terminal in VS Code (`Ctrl+``).
 ```bash
 source venv/bin/activate  # macOS/Linux
 venv\Scripts\activate     # Windows
-Start the Django development server:
 ```
 
 6. Install dependencies:
@@ -65,4 +64,4 @@ python manage.py runserver
 
 ## Usage
 - Open the web application in your browser.
-- View real-time flood data on the line graph for the selected station.
+- View real-time flood data for the past 24 hours on the line graph for the selected station.
