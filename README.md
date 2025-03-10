@@ -10,7 +10,6 @@ A web-based flood monitoring system that provides real-time flood data visualiza
 - **Frontend**: HTML, JavaScript
 - **Backend**: Python, Django
 - **APIs**: Weather data APIs
-- **Machine Learning**: Python
 - **Development Tools**: VS Code, Virtual Environment (`venv`)
 - 
 ## Installation
