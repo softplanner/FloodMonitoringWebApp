@@ -139,3 +139,52 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# settings.py
+
+LOGGING = {
+    'version': 1,  # The version of the logging configuration schema.
+    'disable_existing_loggers': False,  # Keep existing loggers.
+
+    # Define formatters to specify the format of log messages.
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+    },
+
+    # Define handlers to specify where log messages are sent.
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': 'django.log',  # Path to the log file.
+            'formatter': 'verbose',
+        },
+    },
+
+    # Define loggers to capture log messages.
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,  # Propagate logs to parent loggers.
+        },
+        'monitoring': {  
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}

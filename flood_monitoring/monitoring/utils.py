@@ -1,5 +1,5 @@
 import json
-
+from monitoring.config import STATIONS_ENDPOINT
 
 class Utils:
     @staticmethod
@@ -15,3 +15,6 @@ class Utils:
         else:
             print("No stations found.")
     
+    @staticmethod
+    def get_readings_endpoint(station_id):
+        return f"{STATIONS_ENDPOINT}/{station_id}/readings?_sorted"
