@@ -25,26 +25,25 @@ A web-based flood monitoring system that provides real-time flood data visualiza
    git clone https://github.com/softplanner/FloodMonitoringWebApp.git
    cd FloodMonitoringWebApp
    ```
-Running the Project in VS Code
-Open the project in VS Code:
-
+2. Open the project in VS Code:
+   
 ```bash
 code .
 ```
 
-2. Select the Python interpreter:
+3. Select the Python interpreter:
 
 ```bash
 Press Ctrl+Shift+P (or Cmd+Shift+P on macOS) and type Python: Select Interpreter.
 ```
 
-3. Choose the virtual environment you created (e.g., venv).
+4. Choose the virtual environment you created (e.g., venv):
 
 ```bash
 Open the integrated terminal in VS Code (`Ctrl+``).
 ```
 
-4. Activate the virtual environment (if not already activated):
+5. Activate the virtual environment (if not already activated):
 
 ```bash
 source venv/bin/activate  # macOS/Linux
@@ -52,13 +51,13 @@ venv\Scripts\activate     # Windows
 Start the Django development server:
 ```
 
-5. Install dependencies:
+6. Install dependencies:
 
 ```bash
 pip install django, requests
 ```
 
-6. Run application
+7. Run application:
    
 ```bash
 python manage.py runserver
