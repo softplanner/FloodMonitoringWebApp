@@ -32,7 +32,7 @@ A web-based flood monitoring system that provides real-time flood data visualiza
 - Django
 - Git
 
-- open folder in the VSCode (FloodMonitoringWebApp)
+example commands to run on Windows, open folder in the VSCode (FloodMonitoringWebApp)
 
 ```bash
 D:\FloodMonitoringWebApp> cd flood_monitoring
@@ -40,7 +40,8 @@ D:\FloodMonitoringWebApp\flood_monitoring> python -m venv env
 D:\FloodMonitoringWebApp\flood_monitoring> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 D:\FloodMonitoringWebApp\flood_monitoring> .\env\Scripts\activate
 D:\FloodMonitoringWebApp\flood_monitoring> pip install django
-D:\FloodMonitoringWebApp\flood_monitoring> pip install requests 
+D:\FloodMonitoringWebApp\flood_monitoring> pip install requests
+D:\FloodMonitoringWebApp\flood_monitoring> python manage.py runserver
 ```
 ## Usage
 - Open the web application in your browser.
