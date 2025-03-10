@@ -5,7 +5,7 @@ from django.http import JsonResponse
 import logging
 from monitoring.constants import GENERIC_ERROR
 
-logger = logging.getLogger(__name__)  # Get a logger for the current module.
+logger = logging.getLogger(__name__) 
 
 stationService = StationService() 
 readingService = ReadingService()
@@ -17,7 +17,7 @@ def get_stations(request):
         return JsonResponse(response, safe=False)
     except Exception as e:
         logger.error(f"{GENERIC_ERROR} : {e}")
-        return JsonResponse({"An error accured in view get_station(): "}, status = 500)
+        return JsonResponse(GENERIC_ERROR, status = 500)
     
 def get_station_readings(request, station_id):
     try:
@@ -26,7 +26,7 @@ def get_station_readings(request, station_id):
         return JsonResponse(response, safe=False)
     except Exception as e:
         logger.error(f"{GENERIC_ERROR} : {e}")
-        return JsonResponse({"An error accured in view get_station_readings(): "}, status = 500)
+        return JsonResponse(GENERIC_ERROR, status = 500)
     
 def home(request):
     return render(request, 'home.html')   

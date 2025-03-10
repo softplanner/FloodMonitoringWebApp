@@ -547,3 +547,13 @@ INFO 2025-03-10 03:40:07,394 stationModel https://environment.data.gov.uk/flood-
 INFO 2025-03-10 03:40:11,442 basehttp "GET /stations/ HTTP/1.1" 200 3656752
 INFO 2025-03-10 03:40:14,415 readingModel https://environment.data.gov.uk/flood-monitoring/id/stations/1771TH/readings?_sorted
 INFO 2025-03-10 03:40:16,015 basehttp "GET /readings/1771TH/ HTTP/1.1" 200 143426
+INFO 2025-03-10 03:52:25,315 autoreload Watching for file changes with StatReloader
+INFO 2025-03-10 03:52:44,055 basehttp "GET /readings/E70024 HTTP/1.1" 301 0
+INFO 2025-03-10 03:52:44,085 readingModel https://environment.data.gov.uk/flood-monitoring/id/stations/E70024/readings?_sorted
+INFO 2025-03-10 03:52:44,624 basehttp "GET /readings/E70024/ HTTP/1.1" 200 149450
+INFO 2025-03-10 03:55:10,937 autoreload D:\Projects\FloodMonitoring\flood_monitoring\monitoring\service\readingService.py changed, reloading.
+INFO 2025-03-10 03:55:12,103 autoreload Watching for file changes with StatReloader
+INFO 2025-03-10 03:55:25,734 autoreload D:\Projects\FloodMonitoring\flood_monitoring\monitoring\service\readingService.py changed, reloading.
+INFO 2025-03-10 03:55:27,050 autoreload Watching for file changes with StatReloader
+INFO 2025-03-10 03:55:30,109 autoreload D:\Projects\FloodMonitoring\flood_monitoring\monitoring\service\readingService.py changed, reloading.
+INFO 2025-03-10 03:55:31,223 autoreload Watching for file changes with StatReloader
