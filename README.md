@@ -65,4 +65,4 @@ python manage.py runserver
 
 ## Usage
 - Open the web application in your browser.
-- View real-time flood data on the map.
+- View real-time flood data on the line graph for the selected station.
