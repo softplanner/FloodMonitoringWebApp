@@ -2,6 +2,8 @@
 
 A web-based flood monitoring system that provides real-time flood data visualization and alerts.
 
+![image alt](https://github.com/softplanner/FloodMonitoringWebApp/blob/3ed193198043e3288a6ac28b4cbca077f2f6ed74/flood_monitoring/ScreenShots/FloodMonitoring_SS.png)
+
 ## Features
 - **Real-time flood data**: Fetch and display real-time flood-related data from APIs.
 - **Interactive Map**: Visualize affected areas using interactive maps.
