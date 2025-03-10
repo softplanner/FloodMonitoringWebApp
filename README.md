@@ -55,7 +55,7 @@ Select the Python interpreter:
 
 ```bash
 Press Ctrl+Shift+P (or Cmd+Shift+P on macOS) and type Python: Select Interpreter.
-```bash
+```
 
 Choose the virtual environment you created (e.g., venv).
 
@@ -63,7 +63,7 @@ Run the server:
 
 ```bash
 Open the integrated terminal in VS Code (`Ctrl+``).
-```bash
+```
 
 Activate the virtual environment (if not already activated):
 
