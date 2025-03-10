@@ -24,25 +24,18 @@ def get_stations(request):
     
 # view to fetch the readings for a specific station using station ID
 def get_station_readings(request, station_id):
+# def get_station_readings(request):
     try:
+        # station_id = request.GET.get('station_id', None)
         print("in get_station_readings views: station id: ", station_id)
         station_readings = Stations.get_station_readings(station_id)
         response = {"data": {"items": station_readings}}
         # return JsonResponse(station_readings, safe=False) # safe = False: allow non-dictionary objects to be serialized into JSON
         return JsonResponse(response)
-
     except Exception as e:
         print(f"Error in get_station_readings view: {e}")
         return JsonResponse({"An error accured in view get_station_readings(): "}, status = 500)
     
 # view to render the main page for flood monitoring web app
-def flood_monitoring(request):
-    return render(request, 'flood_monitoring.html')
-
-def get_data(request):
-    data = {
-        'message': 'Hello, World!',
-        'status': 'success'
-    }
-    return JsonResponse(data)
-    
+def home(request):
+    return render(request, 'home.html')   

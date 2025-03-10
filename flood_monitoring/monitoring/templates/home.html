@@ -5,22 +5,9 @@
 {% block content %}
 <h2>Flood Monitoring</h2>
 
-<!-- Dropdown for selecting a station -->
-<!-- <select id="stationSelect" onchange="loadReadings()">
-    <option value="">Select Station</option>
-    {% for station in stations %}
-        <option value="{{ station.stationReference }}">{{ station.stationName }}</option>
-    {% endfor %}
-</select> -->
-
-
 <select id="stationSelect"> 
     <option value="">Loading...</option>
 </select>
-
-<!-- Button to Submit Selection -->
-<button id="submitStation">Submit</button>
-
 
 <!-- Chart Canvas -->
 <canvas id="floodChart" width="400" height="200"></canvas>

@@ -5,7 +5,7 @@ window.onload = function() {
 
 // The function to make the API call
 async function getStation() {
-        fetch('/monitoring/stations/')
+        fetch('/stations/')
             .then(response => response.json())
             .then(data => {
                 // console.log("API Response:", data); 
@@ -36,8 +36,13 @@ async function loadReadings() {
         return; // Exit if no station is selected
     }
 
+    const currentUrl = window.location.href;
+    // Display the URL in the paragraph element    
+    // urlDisplay.textContent = `Current URL: ${currentUrl}`;
+    console.log('URL Testing:' + currentUrl)
+
     try {
-            const response = await fetch(`/monitoring/readings/${stationId}/`); // Fetch readings based on station ID
+            const response = await fetch(`/readings/${stationId}`); // Fetch readings based on station ID
             const data     = await response.json(); // Parse response JSON
 
         if (!response.ok || data.error) {
