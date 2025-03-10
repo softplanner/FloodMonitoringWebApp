@@ -557,3 +557,53 @@ INFO 2025-03-10 03:55:25,734 autoreload D:\Projects\FloodMonitoring\flood_monito
 INFO 2025-03-10 03:55:27,050 autoreload Watching for file changes with StatReloader
 INFO 2025-03-10 03:55:30,109 autoreload D:\Projects\FloodMonitoring\flood_monitoring\monitoring\service\readingService.py changed, reloading.
 INFO 2025-03-10 03:55:31,223 autoreload Watching for file changes with StatReloader
+INFO 2025-03-10 06:16:13,422 autoreload Watching for file changes with StatReloader
+INFO 2025-03-10 06:16:22,081 basehttp "GET / HTTP/1.1" 200 1011
+INFO 2025-03-10 06:16:22,153 basehttp "GET /static/js/flood.js HTTP/1.1" 304 0
+INFO 2025-03-10 06:16:22,291 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:16:26,350 basehttp "GET /stations/ HTTP/1.1" 200 3657210
+INFO 2025-03-10 06:16:29,485 readingModel https://environment.data.gov.uk/flood-monitoring/id/stations/720215/readings?_sorted&_limit=96
+INFO 2025-03-10 06:16:30,798 basehttp "GET /readings/720215/ HTTP/1.1" 200 26976
+INFO 2025-03-10 06:17:08,735 basehttp "GET /readings/693115 HTTP/1.1" 301 0
+INFO 2025-03-10 06:17:08,750 readingModel https://environment.data.gov.uk/flood-monitoring/id/stations/693115/readings?_sorted&_limit=96
+INFO 2025-03-10 06:17:10,134 basehttp "GET /readings/693115/ HTTP/1.1" 200 26997
+INFO 2025-03-10 06:18:24,716 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:18:26,190 basehttp "GET /stations/ HTTP/1.1" 200 3657210
+INFO 2025-03-10 06:19:23,465 basehttp "GET / HTTP/1.1" 200 1011
+INFO 2025-03-10 06:19:23,574 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:19:24,415 basehttp "GET /stations/ HTTP/1.1" 200 3657210
+INFO 2025-03-10 06:19:38,457 basehttp "GET / HTTP/1.1" 200 1022
+INFO 2025-03-10 06:19:38,564 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:19:39,647 basehttp "GET /stations/ HTTP/1.1" 200 3657210
+INFO 2025-03-10 06:19:48,042 basehttp "GET / HTTP/1.1" 200 1031
+INFO 2025-03-10 06:19:48,146 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:19:49,063 basehttp "GET /stations/ HTTP/1.1" 200 3657210
+INFO 2025-03-10 06:20:04,212 basehttp "GET / HTTP/1.1" 200 1027
+INFO 2025-03-10 06:20:04,326 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:20:07,058 basehttp "GET /stations/ HTTP/1.1" 200 3657210
+INFO 2025-03-10 06:20:12,430 basehttp "GET / HTTP/1.1" 200 1015
+INFO 2025-03-10 06:20:12,538 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:20:13,279 basehttp "GET /stations/ HTTP/1.1" 200 3657210
+INFO 2025-03-10 06:20:57,919 basehttp "GET / HTTP/1.1" 200 1015
+INFO 2025-03-10 06:20:58,066 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:20:58,789 basehttp "GET /stations/ HTTP/1.1" 200 3657210
+INFO 2025-03-10 06:21:52,949 basehttp "GET / HTTP/1.1" 200 1083
+INFO 2025-03-10 06:21:53,052 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:21:54,354 basehttp "GET /stations/ HTTP/1.1" 200 3657210
+INFO 2025-03-10 06:23:08,856 basehttp "GET / HTTP/1.1" 200 1097
+INFO 2025-03-10 06:23:08,973 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:23:10,312 basehttp "GET /stations/ HTTP/1.1" 200 3657210
+INFO 2025-03-10 06:24:48,028 basehttp "GET / HTTP/1.1" 200 1106
+INFO 2025-03-10 06:24:48,138 stationModel https://environment.data.gov.uk/flood-monitoring/id/stations
+INFO 2025-03-10 06:24:48,880 basehttp "GET /stations/ HTTP/1.1" 200 3657906
+INFO 2025-03-10 06:24:52,202 readingModel https://environment.data.gov.uk/flood-monitoring/id/stations/48143/readings?_sorted&_limit=96
+INFO 2025-03-10 06:24:52,782 basehttp "GET /readings/48143/ HTTP/1.1" 200 28331
+INFO 2025-03-10 06:25:31,909 readingModel https://environment.data.gov.uk/flood-monitoring/id/stations/693115/readings?_sorted&_limit=96
+INFO 2025-03-10 06:25:33,435 basehttp "GET /readings/693115/ HTTP/1.1" 200 26997
+INFO 2025-03-10 06:25:58,835 readingModel https://environment.data.gov.uk/flood-monitoring/id/stations/720215/readings?_sorted&_limit=96
+INFO 2025-03-10 06:25:59,587 basehttp "GET /readings/720215/ HTTP/1.1" 200 26977
+INFO 2025-03-10 06:26:20,446 basehttp "GET /readings/E21720 HTTP/1.1" 301 0
+INFO 2025-03-10 06:26:20,483 readingModel https://environment.data.gov.uk/flood-monitoring/id/stations/E21720/readings?_sorted&_limit=96
+INFO 2025-03-10 06:26:20,900 basehttp "GET /readings/E21720/ HTTP/1.1" 200 26965
+INFO 2025-03-10 06:26:26,324 readingModel https://environment.data.gov.uk/flood-monitoring/id/stations/2804TH/readings?_sorted&_limit=96
+INFO 2025-03-10 06:26:26,712 basehttp "GET /readings/2804TH/ HTTP/1.1" 200 27557
